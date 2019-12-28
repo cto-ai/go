@@ -1,0 +1,16 @@
+{
+  "name": "go",
+  "version": "1.0.0",
+  "description": "Securely run go applications on demand from within an containerize workflow",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@cto.ai/sdk": "^2.0.1",
+    "parse-github-url": "^1.0.2"
+  }
+}

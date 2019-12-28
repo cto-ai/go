@@ -1,0 +1,16 @@
+# for more info visit https://cto.ai/docs/ops-reference
+version: "1"
+commands:
+  - name: go:0.1.0
+    public: true
+    description: Run go modules securely from within a containerized workflow
+    run: node index.js
+    env:
+      - "GO111MODULE=on"
+    sourceCodeURL: "https://github.com/cto-ai/go"
+    help:
+      usage: "ops run go <pkg>"
+      arguments:
+        pkg: "<pkg>"
+      options:
+        help: "-h"
