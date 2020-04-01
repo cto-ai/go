@@ -113,18 +113,18 @@ arrow=$(purple "    ==>   ")
 msg=$arrow
 msg+=$(white " Downloading ${uri}")
 
-echo -e $msg
+ux print $msg
 
 msg=$arrow
 msg+=$(white " Resolved version to ${version}")
 
-echo -e $msg
+ux print $msg
 
 msg=$arrow
 msg+=$(white " Installing ${binary} to /usr/local/bin")
 
-echo -e $msg
-echo ""
+ux print $msg
+ux print ""
 
 curl https://gobinaries.com/$uri | sh > /dev/null
 
@@ -135,8 +135,11 @@ msg+=$(white " Running ${binary}@${version} ${@:2}")
 # echo $binary
 # echo $version
 
-echo ""
-echo -e $msg
+ux print ""
+ux print $msg
+
+# msg=$(eval $binary ${@:2}) # still needs some work for Slack.
+# ux print $msg
 
 eval $binary ${@:2}
 

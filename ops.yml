@@ -1,8 +1,8 @@
 # for more info visit https://cto.ai/docs/developing-ops/configuring-ops
 version: "1"
 commands:
-  - name: go:0.2.0
-    public: false
+  - name: go:0.3.0
+    public: true
     description: Run gobinaries.com securely from within a containers workflow.
     run: bash /ops/main.sh
     remote: true
