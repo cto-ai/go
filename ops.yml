@@ -1,16 +1,27 @@
-# for more info visit https://cto.ai/docs/ops-reference
+# for more info visit https://cto.ai/docs/developing-ops/configuring-ops
 version: "1"
 commands:
-  - name: go:0.1.0
-    public: true
-    description: Run go modules securely from within a containerized workflow
-    run: node index.js
+  - name: go:0.2.0
+    public: false
+    description: Run gobinaries.com securely from within a containers workflow.
+    run: bash /ops/main.sh
+    remote: true
+    sdk: "2"
+    sourceCodeURL: ""
     env:
-      - "GO111MODULE=on"
-    sourceCodeURL: "https://github.com/cto-ai/go"
-    help:
-      usage: "ops run go <pkg>"
-      arguments:
-        pkg: "<pkg>"
-      options:
-        help: "-h"
+      - "MY_ENV_VAR=$MY_ENV_VAR"
+      - "MY_ACCESS_TOKEN=$MY_ACCESS_TOKEN"
+    mountCwd: false
+    mountHome: false
+    # bind:
+    #   - "/tmp:/tmp"
+    # port:
+    #   - 3000:3000
+    # help:
+    #   usage: "Your first Bash hello-world op"
+    #   arguments:
+    #     username: "Your username"
+    #     email: "Your email"
+    #   options:
+    #     build: "Build flag"
+    #     clear: "Clears"
