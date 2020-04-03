@@ -14,3 +14,5 @@ Securely run go applications on demand using [GoBinaries.com](https://twitter.co
 
 ![GoBinaries.com](https://cto.ai/blog/content/images/2020/04/On-demand-Golang-binaries_Blog-Headerv2.jpg)
 
+# License
+MIT   
